@@ -4,9 +4,9 @@ public final class Problema1b {
 		int answer= (int) Math.floor(Math.random() * 100 + 1);
 		int guess = 0;
 		int numGuesses = 1;
+		System.out.println("adivine un numero");
 		while(guess != answer){
 			if(numGuesses <= 7){
-				System.out.println("adivine un numero");
 				guess = ingresar.nextInt();  
 				if(guess < answer){
 					System.out.println("mas alto");
@@ -23,18 +23,19 @@ public final class Problema1b {
 			else{
 				if(numGuesses > 7){
 					System.out.println("Perdiste TT^TT");
+					break;
 				}
 			}
 		}
 	}
 	
 	public static void main(String[] args) {
-		//char[] ans = new char[1];
+		int ans ;
 		do{
 			GuestGame();
-			System.out.println("desea jugar otra vez?(Y/N)");
-			//ans=ingresar.nextchar();			
+			System.out.println("desea jugar otra vez?(1/2)");
+			ans=ingresar.nextInt();			
 		}
-		while(true);//ans[0] == 'Y' || ans ==[0] 'y');
+		while(ans == 1);
 	}
 }
